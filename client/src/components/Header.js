@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
     constructor(props) {
@@ -21,27 +22,41 @@ class Header extends Component {
     }
 
   render() {
-    return (
-      <div className="stepper">
-        <button onClick={this.decrementNumber}>-</button>
-        <div>{this.props.passengerNumber}</div>
-        <button onClick={this.incrementNumber}>+</button>
-      </div>
-    )
+      if (false) {
+        return (
+            <header className="stepper">
+                <h1>Header log = true</h1>
+                <Link to = "/Home">Home</Link>
+                <Link to = "/MyMovies">Login</Link>
+                <Link to = "/Logout">Register</Link>
+                <hr />
+            </header>
+          )
+      } else {
+          return (
+            <header>
+                <h1>Header log = false</h1>
+                <Link to = "/">Home</Link>
+                <Link to = "/login">Login</Link>
+                <Link to = "/register">Register</Link>
+                <hr />
+            </header>
+          )
+      }
+    
   }
 }
 
 
 const mapStateToProps = (state) => {
     return {
-        passengerNumber : state.passengerNumber
+
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIncrementNumber: () => dispatch({type: "INC_PASSENGER"}),
-        onDecrementNumber: () => dispatch({type: "DEC_PASSENGER"})
+
     }
 }
 

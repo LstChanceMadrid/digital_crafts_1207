@@ -6,14 +6,15 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from './store/reducer'
-import Login from './components/main/Login'
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 let store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
     <Provider store = {store}>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </Provider>
 , document.getElementById('root'));
 

@@ -2,6 +2,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Login from './main/Login'
+import Register from './main/Register'
+import Home from './main/Home'
+import { Route, Switch } from 'react-router-dom'
 
 class Main extends Component {
   constructor(props) {
@@ -17,22 +20,13 @@ class Main extends Component {
       username : e.target.value
     }, this.props.onHandleButton(e.target.value))
 
-
-    // console.log('handle button')
-    // this.props.onHandleButton(e.target.value)
-    // console.log(this.state)
-    // console.log(this.props)
   }
 
 
   render() {
     return (
       <div>
-          <h1>Main</h1>
-          <input type="text" onChange={this.handleButton} />
-          <button onClick={this.handleButton}>button</button>
-          <div>{this.props.username}</div>hi
-          {this.state.username}
+          {this.props.children}
       </div>
     )
   }

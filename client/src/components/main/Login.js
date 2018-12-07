@@ -14,30 +14,18 @@ class Login extends Component {
     }
 
     handleLoginButton = () => {
-        console.log(this.state.username)
-        console.log(this.state)
-        console.log(this.props)
-        this.props.onUsernameChange(this.state.username)
+
     }
-
-    handleUsernameTextBox = (e) => {
-        this.setState({
-            username : e.target.value
-        })
-    }
-
-
-
 
   render() {
     return (
       <div>
         <h1>Hello Login</h1>
         <label>Username</label>
-        <input type="text" onChange={this.handleUsernameTextBox} name="username" placeholder="Username" />
+        <input type="text" name="username" placeholder="Username" />
         <label>Password</label>
         <input type="text" name="password" placeholder="Password" />
-        <button onClick={this.handleLoginButton}>Login</button>
+        <button>Login</button>
       </div>
     )
   }

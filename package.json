@@ -1,0 +1,32 @@
+{
+  "name": "super-movies",
+  "version": "1.0.0",
+  "description": "MY own express-react-app # digital_crafts_1207",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "pg-promise": "^8.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LstChanceMadrid/digital_crafts_1207.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LstChanceMadrid/digital_crafts_1207/issues"
+  },
+  "homepage": "https://github.com/LstChanceMadrid/digital_crafts_1207#readme"
+}

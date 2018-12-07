@@ -1,12 +1,17 @@
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
-export default class Footer extends Component {
+
+class Footer extends Component {
   render() {
     return (
       <div>
+        <hr />
         <h1>Footer</h1>
       </div>
     )
   }
 }
+
+export default connect()(Footer)
