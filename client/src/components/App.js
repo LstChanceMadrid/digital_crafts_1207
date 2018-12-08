@@ -8,6 +8,8 @@ import { Route, Switch } from 'react-router-dom'
 import Login from './main/Login'
 import Home from './main/Home'
 import Register from './main/Register'
+import MyMovies from './main/MyMovies'
+import Logout from './main/Logout'
 
 class App extends Component {
   render() {
@@ -19,7 +21,9 @@ class App extends Component {
           <Switch>
             <Route exact path = '/' component = {Home} />
             <Route exact path = '/login' component = {Login} />
-            <Route path = '/register' component = {Register} />
+            <Route exact path = '/register' component = {Register} />
+            <Route path = '/:username/logout' component = {Logout} />
+            <Route path = '/:username/my-movies' component = {MyMovies} />
           </Switch>
         </Main>
         

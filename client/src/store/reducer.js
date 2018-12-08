@@ -1,15 +1,16 @@
 
 const initialState = {
-  passengerNumber : 0
+  username: "",
 }
 
 const reducer = (state = initialState, action) => {
   // some stuff
 
-  if (action.type === "USERNAME") {
+  if (action.type === "CURRENT_USER") {
+    console.log('reducer')
     return {
       ...state,
-      username : state.username + 1
+      username : action.username
     }
   }
 
@@ -19,20 +20,6 @@ const reducer = (state = initialState, action) => {
       username : state.username
     }
   }
-
-  if (action.type === "INC_PASSENGER") {
-    return {
-        ...state,
-        passengerNumber : state.passengerNumber + 1
-    }
-}
-
-if (action.type === "DEC_PASSENGER") {
-    return {
-        ...state,
-        passengerNumber : state.passengerNumber - 1
-    }
-}
 
   return state
 }

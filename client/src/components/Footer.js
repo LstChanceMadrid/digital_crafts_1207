@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 class Footer extends Component {
   render() {
     return (
-      <div>
+      <footer>
         <hr />
         <h1>Footer</h1>
-      </div>
+      </footer>
     )
   }
 }
